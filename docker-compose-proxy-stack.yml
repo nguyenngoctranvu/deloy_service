@@ -21,7 +21,7 @@ services:
   swarm-listener:
     image: dockerflow/docker-flow-swarm-listener
     networks:
-      - proxy
+      - fimplus
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
