@@ -9,7 +9,7 @@ services:
       - 443:443
       - 8080:8080
     networks:
-      - proxy
+      - fimplus
     environment:
       - LISTENER_ADDRESS=swarm-listener
       - MODE=swarm
@@ -19,7 +19,7 @@ services:
   swarm-listener:
     image: dockerflow/docker-flow-swarm-listener
     networks:
-      - proxy
+      - fimplus
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
@@ -30,5 +30,5 @@ services:
         constraints: [node.role == manager]
 
 networks:
-  proxy:
+  fimplus:
     external: true
