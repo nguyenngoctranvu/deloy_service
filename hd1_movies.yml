@@ -19,7 +19,7 @@ services:
         - com.df.httpsOnly=true
 
     networks:
-      - fimmplus
+      - fimplus
 
 networks:
   fimplus:
