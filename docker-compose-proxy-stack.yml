@@ -9,7 +9,7 @@ services:
       - 443:443
       - 8080:8080
     networks:
-      - proxy
+      - fimplus
     environment:
       - LISTENER_ADDRESS=swarm-listener
       - MODE=swarm
@@ -33,5 +33,5 @@ services:
       replicas: 2
 
 networks:
-  proxy:
+  fimplus:
     external: true
