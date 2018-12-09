@@ -3,7 +3,7 @@ services:
   main:
     image: hub.fimplus.io/repo/hd1-movies:v1.1
     networks:
-      - proxy
+      - fimplus
     deploy:
       mode: global
       placement:
@@ -19,8 +19,8 @@ services:
         - com.df.httpsOnly=true
 
     networks:
-      - proxy
+      - fimmplus
 
 networks:
-  proxy:
+  fimplus:
     external: true
