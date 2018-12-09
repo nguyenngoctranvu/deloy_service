@@ -16,7 +16,7 @@ services:
     deploy:
       replicas: 2
       placement:
-        constraints: [node.labels.env == proxy]
+        constraints: [node.labels.env == manager]
 
   swarm-listener:
     image: dockerflow/docker-flow-swarm-listener
